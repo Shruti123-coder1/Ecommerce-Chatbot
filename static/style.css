@@ -1,0 +1,112 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    
+    
+}
+.chat-container {
+    width: 400px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    backdrop-filter: blur(5px); 
+    
+   
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+.chat-header {
+    background: linear-gradient(90deg, #6a11cb,#3f187d);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: rgba(247, 249, 252, 0.8); /* slightly transparent */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 0 0 15px 15px;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.user-msg {
+    align-self: flex-end;
+    background: #3f187d;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.bot-msg {
+    align-self: flex-start;
+    background: #e4e6eb;
+    color: #000;
+    border-bottom-left-radius: 0;
+}
+
+
+.input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background: #fff;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1em;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background: #3f187d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #6a11cb;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 3px;
+}
